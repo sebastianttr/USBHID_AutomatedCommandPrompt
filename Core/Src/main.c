@@ -267,8 +267,9 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 
 
-int scan_cvt=1;
+
 void keyboard_send_ch(uint8_t ch,uint8_t  modi){
+		static int scan_cvt=1;
 		int code;
     if( scan_cvt ){
         if( ch > 128 ){
